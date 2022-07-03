@@ -1,0 +1,33 @@
+            <div class="main-container">
+                <h1 class="mat-display-2" style="font-weight: 900; text-align: center;">TIC TAC TOE</h1>
+                <div class="field d-flex justify-content-center">
+                    <button mat-raised-button color="warn" (click)="togglePlayer()">
+                        {{players ? '1 Player' : '2 Players'}}  
+                        </button>
+                </div>
+                <div class="field d-flex justify-content-center">
+                    <input *ngIf="showTextBox" type="text" placeholder="Player 1"> 
+                </div>
+                <div class="field d-flex justify-content-center">
+                    <input *ngIf="showTextBox" type="text" placeholder="Player 2"> 
+                </div>
+                <div class="field d-flex justify-content-center" style="width: 100%;">
+                    <button mat-raised-button color="accent" class="start-game-button" (click)="startGame()">Start</button>
+                </div>
+                <div class="field d-flex justify-content-center">
+                    <h2 *ngIf="winner">
+                        Player {{ winner }} won the game!
+                    </h2>
+                </div>
+                <div style="width: 50%; float: left;" class="game-board">
+                    <main>
+                        <app-square 
+                            *ngFor="let val of squares; let i = index"
+                            [value]="val"
+                            (click)="makeMove(i)">
+                        </app-square>
+                        
+                    </main>
+                    
+                </div>
+            </div>

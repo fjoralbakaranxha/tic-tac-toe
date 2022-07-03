@@ -1,0 +1,23 @@
+.mat-display-2 {
+    margin-top: 10px;
+}
+.field {
+    margin-top: 10px;
+}
+
+main {
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2px;
+    max-width: 500px;
+    max-height: 500px;
+    justify-content: center;
+    margin-left: 100px;
+}
+
+app-square{
+    border: 1px gray solid;
+    height: 150px;
+}
+
