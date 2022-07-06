@@ -11,16 +11,28 @@ export class AppComponent {
   title = 'tic-tac-toe';
 
 logsFromBoardToLogs : any;
+logsFromLogsToBoard : any;
+
+currentPlayer1Name : any;
+currentPlayer2Name : any;
 
   constructor() {};
 
 
   fwdLogsToLogs($event: any) {
      this.logsFromBoardToLogs = $event;
-     console.log($event);
      }
 
+  fwdLogsToBoard($event: any) { 
+    this.logsFromLogsToBoard = $event; 
+  }
  
- 
+  fwdPlayer1NameToBoard($event: any) {
+    this.currentPlayer1Name = $event;
+  }
+
+  fwdPlayer2NameToBoard($event: any) {
+    this.currentPlayer2Name = $event;
+  }
 }
 

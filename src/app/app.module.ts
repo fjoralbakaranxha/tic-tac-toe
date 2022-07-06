@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { LogsComponent } from './logs/logs.component';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { LogsComponent } from './logs/logs.component';
     AppComponent,
     BoardComponent,
     SquareComponent,
-    LogsComponent
+    LogsComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

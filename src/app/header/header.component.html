@@ -1,0 +1,12 @@
+<h1 class="mat-display-2" style="font-weight: 900; text-align: center;">TIC TAC TOE</h1>
+                <div class="field d-flex justify-content-center">
+                    <button mat-raised-button color="warn" (click)="togglePlayer()">
+                        {{players ? '1 Player' : '2 Players'}}  
+                        </button>
+                </div>
+                <div class="field d-flex justify-content-center">
+                    <input *ngIf="showTextBox" type="text" placeholder="Player 1" id="player1Name" name="player1Name" [(ngModel)]="currentPlayer1Name" (keyup)="onKeySearch($event)"> 
+                </div>
+                <div class="field d-flex justify-content-center">
+                    <input *ngIf="showTextBox" type="text" placeholder="Player 2" id="player2Name" name="player2Name" [(ngModel)]="currentPlayer2Name" (keyup)="onKeySearch($event)"> 
+                </div>

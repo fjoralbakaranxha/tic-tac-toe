@@ -1,14 +1,14 @@
 <table class="table">
     <thead>
         <tr>
-            <th> Player</th>
-            <th> Cordinate</th>
+            <th > Player</th>
+            <th > Cordinate</th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let log of logs">
-            <td>{{log.player}}</td>
-            <td>{{log.cordinate}}</td>
+        <tr *ngFor="let log of logs;  let i = index" (click)="onLogClicked(i)">
+            <td><button mat-flat-button>{{log.player}} </button></td>
+            <td><button mat-flat-button>{{log.cordinate}}</button></td>
            
           </tr>
     </tbody>

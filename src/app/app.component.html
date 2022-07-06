@@ -1,5 +1,17 @@
-<app-board (logsToLogs)="fwdLogsToLogs($event)"></app-board>
+    <app-header 
+       (player1Name)="fwdPlayer1NameToBoard($event)"
+       (player2Name)="fwdPlayer2NameToBoard($event)">
+    </app-header>
+    <app-board 
+       [logsFromLogsToBoard]="logsFromLogsToBoard" 
+       (logsToLogs)="fwdLogsToLogs($event)" 
+       [currentPlayer1Name]="currentPlayer1Name"
+       [currentPlayer2Name]="currentPlayer2Name">
+    </app-board>
 
 <div style="width: 50%; float: left;" class="logs">
-    <app-logs [logs]="logsFromBoardToLogs"></app-logs>
+    <app-logs
+          [logs]="logsFromBoardToLogs"
+          (logsToBoard)="fwdLogsToBoard($event)">
+    </app-logs>
  </div>
