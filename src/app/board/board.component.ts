@@ -37,8 +37,8 @@
         const logIndexes = this.logs.slice(0, +this.logsFromLogsToBoard + 1).map((log: any) => log.cordinate);
 
         const newSquares = this.squares.map((square: any, index: number) => {     //
-          if(logIndexes.includes(index)) {                       //a ekziston indexi i square te boardit tek logs
-            if((logIndexes.indexOf(index) + 1) % 2 === 0) { // nqs ekzistojne kontrollon nese indexi i squares ne logs eshte i plotpj me 2, dhe rikthen O perndryshe rikthen X.
+          if(logIndexes.includes(index)) {                      
+            if((logIndexes.indexOf(index) + 1) % 2 === 0) {  
               return 'O'
             }
             return 'X'
