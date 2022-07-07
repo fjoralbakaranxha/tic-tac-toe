@@ -71,21 +71,21 @@
 
       computerMove() {
         var emptyCells: any = [];
-        var random;                                                                                                         // empty cells mban index e square qe jane bosh. random eshte index qe do marrim nga empty cells. 
+        var random;                                                                                                         
         this.squares.forEach(function(cell, index){
-          if (cell == 0) {                                                                                                  //nqs square = 0 e shton te empty cells
+          if (cell == 0) {                                                                                                  
             emptyCells.push(index);
           }
         });
         
         if(emptyCells.length === 0) return;
 
-        random = emptyCells[Math.ceil(Math.random() * emptyCells.length) - 1];                                                 //zgjidhet nje index random nga empty cells
+        random = emptyCells[Math.ceil(Math.random() * emptyCells.length) - 1];                                               
         this.makeMove(random);
       }
 
       makeMove(idx: number) {        
-        if(this.logs.length > 0 && this.logsFromLogsToBoard && +this.logsFromLogsToBoard < this.logs.length - 1) return;       // kontrollon nqs ka logs, kontrollon nqs logfromlogstoboard ka vlere dhe nqs logsfromlogstoboard eshte me i vogel se index i elementit te fundit. nqs plotesohen keto nuk behet move.
+        if(this.logs.length > 0 && this.logsFromLogsToBoard && +this.logsFromLogsToBoard < this.logs.length - 1) return;       
         
         if (this.winner || this.squares[idx]) {      
           return;
